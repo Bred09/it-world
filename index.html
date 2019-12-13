@@ -32,9 +32,8 @@
     <script src="//code.jivosite.com/widget.js" data-jv-id="65jgSwYoyd" async></script>
 
     
-
+<div class="load"></div>
 <body>
-    <div class="load"></div>
 	<section id="ut-hero" >
         <div class="fullscreen-bg">
             <div class="overlay">
@@ -87,7 +86,6 @@
         </nav>
 
 </header>
-    
 
  <section class="title movIn">
         <div class="container">
@@ -116,9 +114,10 @@
             </div>
         <p style="
             text-align: center;
-           "><button class="btn-get">оставить заявку</button>
+           "><button class="btn-get"><b>submit</b></button>
                 <style>
                     .btn-get{background: none;
+                        letter-spacing: 2px;
                         color: #00deff;
                         border: 1px solid;
                         border-radius: 100px;
@@ -166,7 +165,7 @@
             <div class="col-4 col-md-2 card">
               <a href="seo.html"><img class="card-img-top" src="img/SEO.png" alt="">
               <div class="card-body">
-                <p class="card-text">SEO Promotion</p>
+                <p class="card-text">digytal marketing and SEO</p>
               </div>
               </a>
             </div>
@@ -188,7 +187,7 @@
             </div>
 
             <div class="col-4 col-md-2 card">
-              <a href="portfolio.html"><img class="card-img-top" src="img/Portfolio.png" alt="">
+              <a href="blog.html"><img class="card-img-top" src="img/blog.svg" alt="">
               <div class="card-body">
                 <p class="card-text">Blog</p>
               </div>
@@ -203,15 +202,10 @@
  </section>
 
 
-<!--/Footer-->
-    <!-- <video playsinline autoplay muted loop poster="https://it-worlds.com/assets/video/Words.jpg"  class="fullscreen-bg__video" > 
-        <source src="https://it-worlds.com/assets/Words.webm" type="video/webm">
-        <source src="https://it-worlds.com/assets/Words.mp4" type="video/mp4">
-        <source src="https://it-worlds.com/assets/Words.ogv" type="video/ogg">
-               
-               
-        Тег video не поддерживается вашим браузером. 
-    </video> -->
+<!-- <video playsinline autoplay muted loop poster="https://it-worlds.com/assets/video/Words.jpg"  class="fullscreen-bg__video">
+<source src="https://it-worlds.com/assets/Words.webm"type="video/webm"><source src="https://it-worlds.com/assets/Words.mp4" type="video/mp4"><source src="https://it-worlds.com/assets/Words.ogv" type="video/ogg">Тег video не поддерживается вашим браузером.
+</video> -->
+    
  
    
 
@@ -256,13 +250,30 @@
         }
         .load{
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            background: #000 url(img/load.gif) no-repeat 50% 50%;
+            z-index: 100;
         }
     
     </style>
 
     <script>
+      var load = document.querySelector('.load');
+      // var boxVideo = document.querySelector('video');
+      // var video = '';
+
+      function play() {
+        boxVideo.innerHTML = video;
+      }
+
+      window.onload = () => {
+        load.style.display = 'none';
+        load.style.transition = '2s';
+        // setTimeout(play, 20000);
+      }
     </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
